@@ -1,0 +1,25 @@
+{
+  "name": "blogsite",
+  "version": "0.1.0",
+  "description": "My simple personal blog site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troyhatch12/nodeBlogSite.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Troy Hatchard <troyhatchard@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/troyhatch12/nodeBlogSite/issues"
+  },
+  "homepage": "https://github.com/troyhatch12/nodeBlogSite#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
