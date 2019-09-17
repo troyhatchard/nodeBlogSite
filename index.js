@@ -6,4 +6,4 @@ const port = 3011;
 
 app.get('/', (req, res) => res.send('Welcome to Troy\'s Website!'));
 
-app.listen(port, () => console.log('Blog site is listening on port $[port]!'));
+app.listen(port, () => console.log('Blog site is listening on port ${port}!'));
