@@ -1,9 +1,24 @@
 //nodejs blog site
 
+const config = require('config');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3011;
 const path = require('path');
+const helmet = require('helmet');
+const morgan = require('morgan');
+
+console.log('Application Name: ' + config.get('name'));
+
+nodeEnv = app.get('env');
+
+//middleware
+app.use(helmet());
+if (nodeEnv == 'development'){
+    app.use(morgan('common'));
+}
+
+
 
 //routes
 //const blog = './routes/blog';

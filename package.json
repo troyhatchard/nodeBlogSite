@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/troyhatch12/nodeBlogSite#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "morgan": "^1.9.1"
   }
 }
