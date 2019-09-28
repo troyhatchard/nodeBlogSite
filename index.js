@@ -9,6 +9,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 
 //required routes
+const home = require('./routes/home');
 const posts = require('./routes/posts');
 
 app.set('view engine', 'pug'); //don't have to require this because it loads itself automatically
@@ -21,14 +22,9 @@ if (nodeEnv == 'development'){
     app.use(morgan('common'));
 }
 app.use('/blog', posts);
+app.use('/', home);
 
 console.log('Application Name: ' + config.get('name'));
 console.log('DB Password: ' + config.get('db.password'));
-
-
-
-app.get('/', (req, res) => {
-    res.render('index', {title: 'Blog Site', message: 'Welcome to Troy\'s website with Pug!'})
-});
 
 app.listen(port, () => console.log(`Blog site is listening on port ${port}!`));
