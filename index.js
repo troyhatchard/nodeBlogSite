@@ -1,15 +1,30 @@
 //nodejs blog site
 
+const config = require('config');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3011;
 const path = require('path');
+const helmet = require('helmet');
+const morgan = require('morgan');
 
-//routes
-//const blog = './routes/blog';
+//required routes
+const home = require('./routes/home');
+const posts = require('./routes/posts');
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/index.html')));
+app.set('view engine', 'pug'); //don't have to require this because it loads itself automatically
 
-app.get('/blog', (req, res) => res.sendFile(path.join(__dirname + '/routes/blogpost.html')));
+
+nodeEnv = app.get('env');
+//middleware
+app.use(helmet());
+if (nodeEnv == 'development'){
+    app.use(morgan('common'));
+}
+app.use('/blog', posts);
+app.use('/', home);
+
+console.log('Application Name: ' + config.get('name'));
+console.log('DB Password: ' + config.get('db.password'));
 
 app.listen(port, () => console.log(`Blog site is listening on port ${port}!`));
