@@ -9,7 +9,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 
 console.log('Application Name: ' + config.get('name'));
-
+console.log('DB Password: ' + config.get('db.password'));
 nodeEnv = app.get('env');
 
 //middleware

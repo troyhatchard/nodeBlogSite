@@ -1,5 +1,5 @@
 {
-    "name": "Blog Site",
+    "name": "Blog Site - Production",
     "db": {
         "db_name": "blogSiteDBName",
         "password": "blogSitePass"
