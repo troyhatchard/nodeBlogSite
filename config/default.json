@@ -1,0 +1,7 @@
+{
+    "name": "Blog Site - Default",
+    "db": {
+        "db_name": "db",
+        "password": "1234"
+    }
+}
