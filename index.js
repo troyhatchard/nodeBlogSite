@@ -29,6 +29,8 @@ app.get('/', (req, res) => {
     res.render('index', {title: 'Blog Site', message: 'Welcome to Troy\'s website with Pug!'})
 });
 
-app.get('/blog', (req, res) => res.sendFile(path.join(__dirname + '/routes/blogpost.html')));
+app.get('/blog', (req, res) => {
+    res.render('blogPostTest', {title: 'Blog Site - Test', postTitle: 'My Test Post', postContent: 'This is a sample blog post. \lThis is a test on a new line'})
+});
 
 app.listen(port, () => console.log(`Blog site is listening on port ${port}!`));
