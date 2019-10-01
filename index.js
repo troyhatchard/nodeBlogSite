@@ -18,6 +18,7 @@ app.set('view engine', 'pug'); //don't have to require this because it loads its
 nodeEnv = app.get('env');
 //middleware
 app.use(helmet());
+app.use(express.static('public'))
 if (nodeEnv == 'development'){
     app.use(morgan('common'));
 }

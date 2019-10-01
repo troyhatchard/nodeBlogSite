@@ -1,6 +1,102 @@
 html
     head
         title= title
+        link(href="https://fonts.googleapis.com/css?family=B612&display=swap" rel="stylesheet")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
     body
-        h1= message
-        a(href='/blog') Blog
+        
+        
+        
+        div(id='splash')    
+            div(id='splashImage')
+                header
+                    h4 Troy Hatchard Blog
+                
+                div(id='splashBody')
+                    h1= message
+                    a(href='/blog', class='button3', id='blogButton') Blog
+
+
+
+style(type='text/css').
+    header {
+        text-align: center;
+        padding-top: 8px;
+    }
+    header h4 {
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'B612', sans-serif;
+        color: white;
+        background-color: #65a1ea;
+    }
+    #splashBody {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align:center;
+        margin-top:10em;
+    }
+    #splashBody h1 {
+        font-size: 50px;
+        color: white;
+    }
+    #splash {
+        background-color: #65a1ea;
+    }
+    #splashImage {
+        width:100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('/src/rainbowMountainEdited.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    a.button3 {
+        display: inline-block;
+        padding: 0.3em 1.2em;
+        margin :0 0.3em 0.3em 0;
+        border-radius: 2em;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color :#4eb5f1;
+        text-align: center;
+        transition: all 0.2s;
+        }
+    a.button3:hover {
+        background-color:#4095c6;
+        }
+    @media all and (max-width:30em) {
+        a.button3 {
+            display:block;
+            margin:0.2em auto;
+        }
+
+    @media only screen and (max-width: 800px) {
+        #splashImage {
+            background-size: 800px;
+            background-position: left top;
+        
+        }
+        #splashBody {
+            margin-top: 7em;
+            width: 75%;
+        }
+        #splashBody h1 {
+            font-size:3em;
+        }
+        #splashBody a {
+            margin-top: 5em;
+            
+
+        }
+    }
