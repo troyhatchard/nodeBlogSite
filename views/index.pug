@@ -2,6 +2,7 @@ html
     head
         title= title
         link(href="https://fonts.googleapis.com/css?family=B612&display=swap" rel="stylesheet")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
     body
         
         
@@ -76,14 +77,19 @@ style(type='text/css').
     a.button3:hover {
         background-color:#4095c6;
         }
+    @media all and (max-width:30em) {
+        a.button3 {
+            display:block;
+            margin:0.2em auto;
+        }
 
-    @media screen and (max-width: 800px) {
+    @media only screen and (max-width: 800px) {
         #splashImage {
             background-size: 800px;
             background-position: left top;
         
         }
-        #splashBody {
-            color:black;
+        #splashBody h1 {
+            font-size:1.5em;
         }
     }
