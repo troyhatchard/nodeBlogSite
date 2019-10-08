@@ -90,3 +90,6 @@ public
 
 # DynamoDB Local files
 .dynamodb/
+
+# Blog Files so they're not on github.
+blogPosts/
