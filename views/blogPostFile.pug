@@ -1,0 +1,12 @@
+
+- var id = postId
+- var postPath = `../blogPosts/post${id}.md`
+
+html
+    head
+        title= title
+        script('/js/callTextFile.js')
+    body
+        h1=postTitle
+        h2=postPath
+        include:markdown-it ../blogPosts/post1.md
