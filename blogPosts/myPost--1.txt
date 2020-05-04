@@ -1,4 +1,0 @@
-This is my first text file blog post
-This is another line of it with only one return before it
-
-This is a third line that will show on a new line because it has 2 returns

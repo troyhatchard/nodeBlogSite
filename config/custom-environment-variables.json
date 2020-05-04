@@ -1,7 +1,0 @@
-{
-    "name": "Blog Site",
-    "db": {
-        "db_name": "blogSiteDBName",
-        "password": "blogSitePass"
-    }
-}

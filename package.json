@@ -1,29 +1,16 @@
 {
   "name": "blogsite",
-  "version": "0.1.0",
-  "description": "My simple personal blog site",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/troyhatch12/nodeBlogSite.git"
-  },
-  "keywords": [
-    "npm"
-  ],
-  "author": "Troy Hatchard <troyhatchard@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/troyhatch12/nodeBlogSite/issues"
-  },
-  "homepage": "https://github.com/troyhatch12/nodeBlogSite#readme",
   "dependencies": {
-    "config": "^3.2.2",
-    "express": "^4.17.1",
-    "helmet": "^3.21.1",
-    "morgan": "^1.9.1",
-    "pug": "^2.0.4"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   }
 }
