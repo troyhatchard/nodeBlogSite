@@ -1,0 +1,26 @@
+{
+  "name": "blogSite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troyhatch12/nodeBlogSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/troyhatch12/nodeBlogSite/issues"
+  },
+  "homepage": "https://github.com/troyhatch12/nodeBlogSite#readme"
+}
