@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "debug": "set DEBUG=blogSite:* & nodemon ./bin/www",
+    "debugAll": "set DEBUG=* & nodemon ./bin/www"
   },
   "dependencies": {
     "config": "^3.3.1",
@@ -12,6 +15,7 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "joi": "^14.3.1",
     "mongoose": "^5.9.13",
     "morgan": "~1.9.1"
   }
