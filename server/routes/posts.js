@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const auth = require('../middleware/auth');
 const router = express.Router();
-const Joi = require('joi');
 const debug = require('debug')('blogSite:api');
 
-const blogSchema = require('../app_logic/schemas/blogSchema');
-const Blog = mongoose.model('Blog', blogSchema);
+
+const { Blog, validate } = require('../app_logic/models/blog');
 
 router.get('/', async function(req, res) {
     debug("hello get request");
@@ -13,9 +13,9 @@ router.get('/', async function(req, res) {
     res.json(posts);
   });
 
-router.post('/', async function(req, res) {
+router.post('/', auth, async function(req, res) {
     debug('request body: ' + JSON.stringify(req.body) + 'of type: ' +  typeof(req.body));
-    const { error } = validateData(req.body);
+    const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message + '\n request must be JSON');
     const { title, content } = req.body;
     const postNumber = await getNextPostNum();
@@ -33,13 +33,6 @@ const getNextPostNum = async () => {
     allPostNums = postQuery.map((post) => post.postNumber);
     const lastPostNum = Math.max.apply(null, allPostNums);
     return lastPostNum + 1;
-}
-const validateData = (post) => {
-    schema = {
-        title: Joi.string().min(3).required(),
-        content: Joi.string().required()
-    };
-    return Joi.validate(post, schema);
 }
 
 module.exports = router;

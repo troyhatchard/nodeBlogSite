@@ -1,3 +1,4 @@
 {
-    "dbConnString": "mongodb://localhost/blogSite"
+    "dbConnString": "mongodb://localhost/blogSite",
+    "jwtPrivateKey": ""
 }
