@@ -35,7 +35,7 @@ router.post('/', async function(req, res) {
   if (user = await User.findOne({email: email})){
     const validPass = await bcrypt.compare(password, user.password);
     if (validPass) {
-        const token = User.generateAuthToken();
+        const token = user.generateAuthToken();
         res.send(token);
     } else res.status(400).send('Invalid email or password');
   } else {

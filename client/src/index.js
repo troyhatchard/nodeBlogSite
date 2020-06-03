@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Hello from './Hello';
+import Header from './Header';
 import * as serviceWorker from './serviceWorker';
+import 'tachyons';
+
+const navLinks = [
+  {name:"Google", link:"google.ca"},
+  {name:"Facebook", link:"facebook.com"}
+]
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header title={'Form Filler'} navLinks={navLinks} />
+    <Hello greeting={'Hello react ninja'}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

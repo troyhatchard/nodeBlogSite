@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const auth = require('../middleware/auth');
+const admin = require('../middleware/admin');
 const router = express.Router();
 const debug = require('debug')('blogSite:api');
 
@@ -27,6 +28,13 @@ router.post('/', auth, async function(req, res) {
      await blogPost.save();
     res.send(await Blog.find());
 })
+
+router.delete('/:id', [auth, admin], async (req, res) => {
+    console.log("body of request: ", req.body);
+    const blog = await Blog.findByIdAndRemove(req.params.id);
+    if (!blog) return res.status(404).send('The post with the given ID was not found');
+    res.send(blog);
+});
 
 const getNextPostNum = async () => {
     const postQuery = await Blog.find({postNumber: { $gt: 0}});

@@ -23,5 +23,7 @@
     "url": "https://github.com/troyhatch12/nodeBlogSite/issues"
   },
   "homepage": "https://github.com/troyhatch12/nodeBlogSite#readme",
-  "dependencies": {}
+  "dependencies": {
+    "tachyons": "^4.12.0"
+  }
 }

@@ -7,7 +7,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const postsRouter = require('./routes/posts');
-const authRouter = require('./routes/auth');
+const authRouter = require('./routes/authentication');
 
 //connect to database
 require('./app_logic/blogDb');
