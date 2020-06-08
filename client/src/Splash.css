@@ -1,9 +1,10 @@
+html, body, #root, .App {
+   height: 100%;
+}
 header {
         text-align: center;
         padding-top: 8px;
 }
-header h4 {
-    }
 
 body {
     padding: 0;
@@ -25,19 +26,23 @@ body {
 }
 #splash {
     background-color: #65a1ea;
+    height:100%
 }
 #splashImage {
     width:100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url('/src/rainbowMountainEdited.jpg');
+    background-image: url('./images/rainbowMountainEdited-360p.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
+}
+#highResImage {
+    display:none;
 }
 a.button3 {
     display: inline-block;
