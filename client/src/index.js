@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './Splash.css'
+import Splash from './Splash';
 import Hello from './Hello';
 import Header from './Header';
 import * as serviceWorker from './serviceWorker';
@@ -13,8 +15,7 @@ const navLinks = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header title={'Form Filler'} navLinks={navLinks} />
-    <Hello greeting={'Hello react ninja'}/>
+    <Splash/>
   </React.StrictMode>,
   document.getElementById('root')
 );
