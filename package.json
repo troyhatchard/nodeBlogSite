@@ -21,7 +21,7 @@
   "homepage": "https://github.com/troyhatch12/nodeBlogSite#readme",
   "dependencies": {
     "config": "^3.2.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "helmet": "^3.21.1",
     "morgan": "^1.9.1",
     "pug": "^3.0.1"
